@@ -1,0 +1,8 @@
+{
+  "server_ex_msg": "issue from our end.\n try again later",
+  "un_auth_msg": "please Login",
+  "bad_inputs_message": "bad inputs ",
+  "not_found_message": "Sorry, not found",
+  "un_caught_message": "un_caught_message",
+  "no_connection_message": "Not connected, check your network settings"
+}

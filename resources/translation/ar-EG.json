@@ -1,0 +1,8 @@
+{
+  "server_ex_msg": "المشكلة من جانبنا.\n حاول مرة أخرى لاحقًا",
+  "un_auth_msg": "يرجي تسجيل الدخول.",
+  "bad_inputs_message": "bad inputs ",
+  "not_found_message": "ناسف ، غير موجود",
+  "un_caught_message": "un_caught_message",
+  "no_connection_message": "غير متصل، تحقق من إعدادات الشبكة"
+}
