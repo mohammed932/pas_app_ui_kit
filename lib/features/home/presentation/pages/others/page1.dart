@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 
-import '../../../../core/widgets/accordion.dart';
-import '../../../../core/widgets/choice_chip_group.dart';
-import '../../../../core/widgets/custom_calender.dart';
+import '../../../../../core/widgets/cards/accordion.dart';
+import '../../../../../core/widgets/input_controls/choice_chip_group.dart';
+import '../../../../../core/widgets/custom_calender.dart';
 
 class PageOne extends StatefulWidget {
   final VoidCallback onTap;
@@ -25,8 +25,13 @@ class _PageOneState extends State<PageOne> {
             child: const Text("button_1"),
           ),
           Gap(20.h),
-          const ChoiceChipGroup(
-            options: ["option1", "option2", "option3"],
+          ChoiceChipGroup(
+            onSelected: (String value) {},
+            options: [
+              ChipModel(label: "option1", value: "option1"),
+              ChipModel(label: "option2", value: "option2"),
+              ChipModel(label: "option3", value: "option3"),
+            ],
           ),
           Gap(20.h),
           Accordion(

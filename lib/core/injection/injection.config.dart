@@ -12,6 +12,18 @@ import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 import 'package:shared_preferences/shared_preferences.dart' as _i460;
 
+import '../../features/authentication/data/datasources/auth_datasource_impl.dart'
+    as _i102;
+import '../../features/authentication/data/datasources/base_auth_datasource.dart'
+    as _i369;
+import '../../features/authentication/data/repositories/auth_repo_impl.dart'
+    as _i836;
+import '../../features/authentication/domain/repositories/auth_repo.dart'
+    as _i802;
+import '../../features/authentication/domain/usecases/auth_usecase.imports.dart'
+    as _i661;
+import '../../features/authentication/presentation/bloc/login/login_bloc.dart'
+    as _i613;
 import '../../features/home/data/datasources/checkInOut_datasource.dart'
     as _i559;
 import '../../features/home/data/datasources/checkInOut_datasource_impl.dart'
@@ -50,6 +62,9 @@ extension GetItInjectableX on _i174.GetIt {
     gh.singleton<_i111.SecureStorage>(() => _i111.SecureStorage());
     gh.lazySingleton<_i975.AppEnv>(() => _i975.AppEnv());
     gh.lazySingleton<_i285.AppRouter>(() => _i285.AppRouter());
+    gh.factory<_i369.BaseAuthDataSource>(() => _i102.AuthDataSourceImpl());
+    gh.factory<_i802.BaseAuthRepo>(
+        () => _i836.AuthRepoImpl(datasource: gh<_i369.BaseAuthDataSource>()));
     gh.factory<_i559.BaseCheckInOutDataSource>(
         () => _i628.BaseCheckInOutDataSourceImpl());
     gh.singleton<_i77.StorageService>(
@@ -57,6 +72,10 @@ extension GetItInjectableX on _i174.GetIt {
     gh.lazySingleton<_i490.BaseNetwork>(() => _i172.DioHelper());
     gh.factory<_i678.BaseCheckInOutRepo>(() => _i469.CheckinOutRepoImp(
         datasource: gh<_i559.BaseCheckInOutDataSource>()));
+    gh.factory<_i661.LoginUseCase>(
+        () => _i661.LoginUseCase(repository: gh<_i802.BaseAuthRepo>()));
+    gh.factory<_i613.LoginBloc>(
+        () => _i613.LoginBloc(loginUseCase: gh<_i661.LoginUseCase>()));
     gh.factory<_i732.CheckInOutUseCase>(
         () => _i732.CheckInOutUseCase(repo: gh<_i678.BaseCheckInOutRepo>()));
     gh.factory<_i1054.CheckInOutBloc>(() => _i1054.CheckInOutBloc(

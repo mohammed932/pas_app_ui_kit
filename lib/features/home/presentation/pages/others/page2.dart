@@ -5,9 +5,9 @@ import 'package:gap/gap.dart';
 import 'package:pas_app/core/injection/injection.dart';
 import 'package:pas_app/core/theme/buttons/app_button.dart';
 
-import '../../../../core/utils/enums.dart';
-import '../../../../core/utils/helper_dialogs.dart';
-import '../bloc/check_in_out/check_in_out_bloc.dart';
+import '../../../../../core/utils/enums.dart';
+import '../../../../../core/utils/helper_dialogs.dart';
+import '../../bloc/check_in_out/check_in_out_bloc.dart';
 
 class PageTwo extends StatefulWidget {
   final VoidCallback onNext;

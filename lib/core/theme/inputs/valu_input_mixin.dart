@@ -82,7 +82,7 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
   }
 
   Color getFillColor() {
-    return PasColorTheme.of(context).fill.input;
+    return PasColorTheme.of(context).gray.input;
   }
 
   String? Function(String?)? get validator {
@@ -163,11 +163,11 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
     switch (currentState) {
       case InputState.dimmed:
       case InputState.unfocused:
-        return PasColorTheme.of(context).border.primary;
+        return PasColorTheme.of(context).system.primary;
       case InputState.error:
-        return PasColorTheme.of(context).border.error;
+        return PasColorTheme.of(context).system.error;
       case InputState.focused:
-        return PasColorTheme.of(context).border.brand;
+        return PasColorTheme.of(context).system.brand;
     }
   }
 
@@ -176,13 +176,13 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
   }
 
   Color get cursorColor {
-    return PasColorTheme.of(context).border.brand;
+    return PasColorTheme.of(context).system.brand;
   }
 
   TextStyle get mainTextStyle {
-    Color color = PasColorTheme.of(context).text.primary;
+    Color color = PasColorTheme.of(context).primary.p100;
     if (!(widget.enabled ?? true)) {
-      color = PasColorTheme.of(context).text.disabled;
+      color = PasColorTheme.of(context).primary.p100;
     }
     return PasTextTheme.of(context).large.semiBold(color: color);
   }
@@ -282,7 +282,7 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
                   counterStyle: TextStyle(
                     fontSize: 0,
                     height: 0.001,
-                    color: PasColorTheme.of(context).border.brand,
+                    color: PasColorTheme.of(context).system.brand,
                   ),
                   prefixIcon: getPrefix(),
                   suffixIcon: getSuffix(),
@@ -295,7 +295,7 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
                   errorStyle: TextStyle(
                     fontSize: 0,
                     height: 0.001,
-                    color: PasColorTheme.of(context).border.brand,
+                    color: PasColorTheme.of(context).system.brand,
                   ),
                   errorText: null,
                   fillColor: getFillColor(),
@@ -304,7 +304,7 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
                   labelText: getHint() != null ? null : widget.label,
                   hintText: getHint(),
                   hintStyle: PasTextTheme.of(context).medium.regular(
-                        color: PasColorTheme.of(context).text.secondary,
+                        color: PasColorTheme.of(context).primary.p200,
                       ),
                   floatingLabelStyle: PasTextTheme.of(context).medium.regular(
                         color: getFloatingLabelColor(),
@@ -344,7 +344,7 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
           Text(
             errorMessage ?? '',
             style: PasTextTheme.of(context).small.semiBold(
-                  color: PasColorTheme.of(context).border.error,
+                  color: PasColorTheme.of(context).system.error,
                 ),
           )
         ]
@@ -355,26 +355,26 @@ mixin PasInput<T extends PasBaseInput> on State<T> {
   Color getLabelColor() {
     switch (currentState) {
       case InputState.focused:
-        return PasColorTheme.of(context).text.primary;
+        return PasColorTheme.of(context).primary.p100;
       case InputState.unfocused:
-        return PasColorTheme.of(context).text.secondary;
+        return PasColorTheme.of(context).primary.p100;
       case InputState.error:
-        return PasColorTheme.of(context).border.error;
+        return PasColorTheme.of(context).system.error;
       case InputState.dimmed:
-        return PasColorTheme.of(context).text.disabled;
+        return PasColorTheme.of(context).primary.p100;
     }
   }
 
   Color getFloatingLabelColor() {
     switch (currentState) {
       case InputState.focused:
-        return PasColorTheme.of(context).text.primary;
+        return PasColorTheme.of(context).primary.p100;
       case InputState.unfocused:
-        return PasColorTheme.of(context).text.primary;
+        return PasColorTheme.of(context).primary.p100;
       case InputState.error:
-        return PasColorTheme.of(context).border.error;
+        return PasColorTheme.of(context).system.error;
       case InputState.dimmed:
-        return PasColorTheme.of(context).text.disabled;
+        return PasColorTheme.of(context).primary.p100;
     }
   }
 

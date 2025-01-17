@@ -5,8 +5,8 @@ class PasColors {
   static const PasGrayColors gray = PasGrayColors._();
   static const PasPrimaryColors primary = PasPrimaryColors._();
   static const PasSecondaryColors secondary = PasSecondaryColors._();
-  static const PasTertiaryColors illustrations = PasTertiaryColors._();
-  static const PasAddationalColors system = PasAddationalColors._();
+  static const PasTertiaryColors tertiary = PasTertiaryColors._();
+  static const PasSystemColors system = PasSystemColors._();
   static const PasAddationalColors addational = PasAddationalColors._();
 }
 

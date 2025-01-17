@@ -4,34 +4,23 @@ import 'package:flutter/material.dart';
 abstract class PasColorThemeBase extends Equatable {
   const PasColorThemeBase();
   String get id;
-  PasTextThemeBase get text;
-  PasSurfaceThemeBase get surface;
-  PasButtonThemeBase get button;
-  PasBorderThemeBase get border;
-  PasIconsThemeBase get icons;
-  PasFillThemeBase get fill;
+  PasPrimaryThemeBase get primary;
+  PasSecondaryThemeBase get secondary;
+  PasTertiaryThemeBase get tertiary;
+  PasSystemThemeBase get system;
+  PasAddationalThemeBase get addational;
+  PasGrayThemeBase get gray;
   @override
   List<Object?> get props => [id];
 }
 
-abstract class PasTextThemeBase {
-  Color get primary;
-  Color get secondary;
-  Color get invert;
-  Color get buttonTertiary;
-  Color get error;
-  Color get disabled;
-  Color get brandTeal;
-  Color get brandOrange;
-  Color get ctaPrimary;
-  Color get ctaSecondary;
-  Color get uPrimary;
-  Color get uSecondary;
-  Color get status;
-  Color get success;
+abstract class PasPrimaryThemeBase {
+  Color get p100;
+  Color get p200;
+  Color get p300;
 }
 
-abstract class PasSurfaceThemeBase {
+abstract class PasSecondaryThemeBase {
   Color get primary;
   Color get secondary;
   Color get invert;
@@ -40,7 +29,7 @@ abstract class PasSurfaceThemeBase {
   Color get overlay;
 }
 
-abstract class PasButtonThemeBase {
+abstract class PasTertiaryThemeBase {
   Color get primary;
   Color get secondary;
   Color get small;
@@ -50,14 +39,14 @@ abstract class PasButtonThemeBase {
   Color get elevated;
 }
 
-abstract class PasBorderThemeBase {
+abstract class PasSystemThemeBase {
   Color get primary;
   Color get secondary;
   Color get brand;
   Color get error;
 }
 
-abstract class PasIconsThemeBase {
+abstract class PasAddationalThemeBase {
   Color get fillSecondary;
   Color get fillWarning;
   Color get fillError;
@@ -70,7 +59,7 @@ abstract class PasIconsThemeBase {
   Color get fillSuccess;
 }
 
-abstract class PasFillThemeBase {
+abstract class PasGrayThemeBase {
   Color get statusNeutral;
   Color get statusAlert;
   Color get statusError;

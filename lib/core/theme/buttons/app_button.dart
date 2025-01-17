@@ -131,7 +131,7 @@ class AppButton extends StatelessWidget {
     this.iconLeft,
     this.iconRight,
     this.color,
-    this.borderRadius = 8.0,
+    this.borderRadius = 50.0,
     this.padding = 16.0,
   });
 

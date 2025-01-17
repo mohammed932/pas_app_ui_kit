@@ -3,13 +3,11 @@ part 'checkInOut_request.g.dart';
 
 @JsonSerializable(explicitToJson: true)
 class CheckInOutRequest {
-  final bool isCheckIn;
-  final String lat;
-  final String long;
+  final String latitude;
+  final String longitude;
   CheckInOutRequest({
-    required this.isCheckIn,
-    required this.lat,
-    required this.long,
+    required this.latitude,
+    required this.longitude,
   });
   Map<String, dynamic> toJson() => _$CheckInOutRequestToJson(this);
 }

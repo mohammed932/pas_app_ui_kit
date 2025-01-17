@@ -40,7 +40,7 @@ class ThemeBloc extends Bloc<ThemeBlocEvent, ThemeBlocState> {
     if (themeId == "PasDarkTheme") {
       theme = PasDarkTheme();
     } else if (themeId == "PasLightTheme") {
-      theme = const PasLightTheme();
+      theme = PasLightTheme();
     } else {
       theme = _getSystemTheme();
       getIt<StorageService>()
@@ -66,7 +66,7 @@ class ThemeBloc extends Bloc<ThemeBlocEvent, ThemeBlocState> {
   Future<void> _changeColorThemeEvent(ColorThemes theme) async {
     // Determine the selected color theme
     final PasColorThemeBase selectedTheme = switch (theme) {
-      ColorThemes.light => const PasLightTheme(),
+      ColorThemes.light => PasLightTheme(),
       ColorThemes.dark => PasDarkTheme(),
       ColorThemes.system => _getSystemTheme(),
     };
@@ -97,7 +97,7 @@ class ThemeBloc extends Bloc<ThemeBlocEvent, ThemeBlocState> {
         return PasDarkTheme();
 
       case Brightness.light:
-        return const PasLightTheme();
+        return PasLightTheme();
     }
   }
 

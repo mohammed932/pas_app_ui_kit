@@ -1,0 +1,33 @@
+import 'package:auto_route/auto_route.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
+import 'package:pas_app/core/utils/helper_dialogs.dart';
+import 'package:pas_app/core/widgets/custom_pages/base_stateless.dart';
+import 'package:sliver_tools/sliver_tools.dart';
+
+import '../../../../core/router/router.dart';
+import '../../../../core/theme/colors/colorspalette.dart';
+import '../../../../core/theme/typography/pas_text_theme.dart';
+import '../../../../core/widgets/cards/custom_card.dart';
+import '../../../../core/widgets/cards/notification_card.dart';
+
+import '../../../../core/widgets/cards/request_tile.dart';
+import '../../../../core/widgets/common/attendance_card.dart';
+import '../../../../core/widgets/common/section_title.dart';
+import '../../../../core/widgets/input_controls/choice_chip_group.dart';
+import '../../../../gen/assets.gen.dart';
+import 'attendance/widgets/attendence_status_card.dart';
+import 'home/widgets/announcement_card.dart';
+import 'home/widgets/checkInOut_widget.dart';
+import 'home/widgets/event_card.dart';
+import 'home/widgets/home_app_bar.dart';
+import 'home/widgets/quick_actions.dart';
+import 'home/widgets/upcoming_event_card.dart';
+import 'requests/widgets/sticky_header.dart';
+import 'requests/widgets/sticky_list.dart';
+part 'home_tabs.dart';
+part 'home/home.dart';
+part 'tasks/tasks_screen.dart';
+part 'requests/requests_screen.dart';
+part 'attendance/attendance_screen.dart';

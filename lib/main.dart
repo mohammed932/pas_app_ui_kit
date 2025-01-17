@@ -33,6 +33,8 @@ void main({BaseEnvironment? environment}) async {
   });
 }
 
+final appRouter = getIt<AppRouter>();
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -54,7 +56,6 @@ class MyApp extends StatelessWidget {
                 supportedLocales: context.supportedLocales,
                 locale: context.locale,
                 debugShowCheckedModeBanner: false,
-                theme: ThemeData(),
                 routerConfig: getIt.get<AppRouter>().config(),
                 builder: (context, child) {
                   PasUiKitInitializer.update(context);

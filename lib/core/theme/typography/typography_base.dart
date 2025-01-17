@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pas_app/core/theme/theme_bloc/theme_bloc.dart';
 
-import 'pas_theme_context.dart';
-
 abstract class PasTypographyTheme extends Equatable {
   const PasTypographyTheme();
   String get id;
@@ -30,30 +28,12 @@ abstract class PasTextStyleConfigs {
 
 abstract class PasBaseTextStyle {
   Color get defaultColor {
-    return BlocProvider.of<ThemeBloc>(PasThemeContext.instance!.context!)
-        .state
-        .selectedColorTheme
-        .text
-        .primary;
+    return Colors.black;
   }
 
   TextStyle light({Color? color});
   TextStyle regular({Color? color});
   TextStyle semiBold({Color? color, bool underline = false});
-  TextStyle bold({Color? color});
-}
-
-abstract class PasHeadingTextStyle {
-  Color get defaultColor {
-    return BlocProvider.of<ThemeBloc>(PasThemeContext.instance!.context!)
-        .state
-        .selectedColorTheme
-        .text
-        .primary;
-  }
-
-  TextStyle regular({Color? color});
-  TextStyle semiBold({Color? color});
   TextStyle bold({Color? color});
 }
 

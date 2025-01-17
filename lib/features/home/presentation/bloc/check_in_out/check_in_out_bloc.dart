@@ -85,9 +85,8 @@ class CheckInOutBloc extends Bloc<CheckInOutEvent, CheckInOutState> {
     emit(state.copyWith(attendanceState: RequestState.loading));
     final response = await checkInOutUseCase(
       params: CheckInOutRequest(
-        isCheckIn: isCheckIn,
-        lat: latitude.toString(),
-        long: longitude.toString(),
+        latitude: latitude.toString(),
+        longitude: longitude.toString(),
       ),
     );
     response.fold(

@@ -8,14 +8,12 @@ part of 'checkInOut_request.dart';
 
 CheckInOutRequest _$CheckInOutRequestFromJson(Map<String, dynamic> json) =>
     CheckInOutRequest(
-      isCheckIn: json['isCheckIn'] as bool,
-      lat: json['lat'] as String,
-      long: json['long'] as String,
+      latitude: json['latitude'] as String,
+      longitude: json['longitude'] as String,
     );
 
 Map<String, dynamic> _$CheckInOutRequestToJson(CheckInOutRequest instance) =>
     <String, dynamic>{
-      'isCheckIn': instance.isCheckIn,
-      'lat': instance.lat,
-      'long': instance.long,
+      'latitude': instance.latitude,
+      'longitude': instance.longitude,
     };

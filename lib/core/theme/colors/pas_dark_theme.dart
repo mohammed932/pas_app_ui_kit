@@ -8,25 +8,25 @@ class PasDarkTheme extends PasColorThemeBase {
   String get id => "PasDarkTheme";
 
   @override
-  PasBorderThemeBase get border => _BorderTheme();
+  PasSystemThemeBase get system => _BorderTheme();
 
   @override
-  PasButtonThemeBase get button => _ButtonTheme();
+  PasTertiaryThemeBase get tertiary => _ButtonTheme();
 
   @override
-  PasFillThemeBase get fill => _FillTheme();
+  PasGrayThemeBase get gray => _FillTheme();
 
   @override
-  PasIconsThemeBase get icons => _IconTheme();
+  PasAddationalThemeBase get addational => _IconTheme();
 
   @override
-  PasSurfaceThemeBase get surface => _SurfaceTheme();
+  PasSecondaryThemeBase get secondary => _SurfaceTheme();
 
   @override
-  PasTextThemeBase get text => _TextTheme();
+  PasPrimaryThemeBase get primary => _PrimaryTheme();
 }
 
-class _BorderTheme extends PasBorderThemeBase {
+class _BorderTheme extends PasSystemThemeBase {
   @override
   Color get primary => PasColors.gray.g300;
 
@@ -40,7 +40,7 @@ class _BorderTheme extends PasBorderThemeBase {
   Color get secondary => PasColors.gray.g200;
 }
 
-class _ButtonTheme extends PasButtonThemeBase {
+class _ButtonTheme extends PasTertiaryThemeBase {
   @override
   Color get primary => PasColors.primary.p100;
 
@@ -63,7 +63,7 @@ class _ButtonTheme extends PasButtonThemeBase {
   Color get elevated => PasColors.gray.g300;
 }
 
-class _FillTheme extends PasFillThemeBase {
+class _FillTheme extends PasGrayThemeBase {
   @override
   Color get statusNeutral => PasColors.gray.g200;
 
@@ -107,7 +107,7 @@ class _FillTheme extends PasFillThemeBase {
   Color get inputBottomSheet => PasColors.gray.g300;
 }
 
-class _IconTheme extends PasIconsThemeBase {
+class _IconTheme extends PasAddationalThemeBase {
   @override
   Color get fillSecondary => PasColors.gray.g200;
 
@@ -139,7 +139,7 @@ class _IconTheme extends PasIconsThemeBase {
   Color get fillSuccess => PasColors.secondary.mintCream;
 }
 
-class _SurfaceTheme extends PasSurfaceThemeBase {
+class _SurfaceTheme extends PasSecondaryThemeBase {
   @override
   Color get primary => PasColors.gray.g300;
 
@@ -159,46 +159,13 @@ class _SurfaceTheme extends PasSurfaceThemeBase {
   Color get overlay => PasColors.gray.g400;
 }
 
-class _TextTheme extends PasTextThemeBase {
+class _PrimaryTheme extends PasPrimaryThemeBase {
   @override
-  Color get primary => PasColors.gray.g300;
+  Color get p100 => throw UnimplementedError();
 
   @override
-  Color get secondary => PasColors.gray.g200;
+  Color get p200 => throw UnimplementedError();
 
   @override
-  Color get invert => PasColors.gray.g400;
-
-  @override
-  Color get ctaPrimary => PasColors.primary.p300;
-
-  @override
-  Color get ctaSecondary => PasColors.gray.g100;
-
-  @override
-  Color get uPrimary => PasColors.gray.g400;
-
-  @override
-  Color get uSecondary => PasColors.gray.g400;
-
-  @override
-  Color get buttonTertiary => PasColors.primary.p300;
-
-  @override
-  Color get status => PasColors.gray.g400;
-
-  @override
-  Color get error => PasColors.secondary.mintCream;
-
-  @override
-  Color get disabled => PasColors.gray.g500;
-
-  @override
-  Color get brandTeal => PasColors.primary.p100;
-
-  @override
-  Color get brandOrange => PasColors.primary.p200;
-
-  @override
-  Color get success => PasColors.secondary.mintCream;
+  Color get p300 => throw UnimplementedError();
 }
